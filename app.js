@@ -14,9 +14,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-app.use("/footsteps", express.static(path.join(__dirname, 'public')));
-const responder = require('./routes/responder');
-app.use('/', responder);
+
+//Footsteps module
+app.use("/footsteps", express.static(path.join(__dirname, 'footsteps/public')));
+const responder = require('./footsteps/routes/responder');
+app.use('/footsteps', responder);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
@@ -37,7 +39,6 @@ app.use(function (err, req, res, next) {
 
 app.listen(8080, () => {
     console.log('Server started on port 8080');
-    
 });
 
 module.exports = app;

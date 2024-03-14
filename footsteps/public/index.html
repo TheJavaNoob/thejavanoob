@@ -260,7 +260,7 @@
                   });
                   var shuffleButton = document.getElementById('shuffleButton');
                   shuffleButton.addEventListener('click', async function () {
-                        var response = await axios.post('/random');
+                        var response = await axios.post('random');
                         console.log(response.data);
                         var url = new URL(window.location.href);
                         url.searchParams.set("name", response.data);
@@ -439,7 +439,7 @@
                   }
             }
             async function askAI(name) {
-                  var response = await axios.post('/ask', {
+                  var response = await axios.post('ask', {
                         data: name
                   })
                   return response.data;

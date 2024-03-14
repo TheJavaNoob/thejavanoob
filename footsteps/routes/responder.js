@@ -5,7 +5,7 @@ var names = [];
 var router = express.Router();
 var names = [];
 
-fs.readFile('names.json', 'utf8', (err, data) => {
+fs.readFile('footsteps/names.json', 'utf8', (err, data) => {
       if (err) console.log(err.message);
       names = JSON.parse(data);
   });
@@ -36,11 +36,8 @@ function random() {
 
 async function ask(data) {
       var name = data;
-      console.log(names);
-      console.logn
       if (names.includes(name)) {
-            console.log("Found " + name + " in data");
-            return fs.readFileSync("data/" + name + ".json", 'utf8');
+            return fs.readFileSync("footsteps/data/" + name + ".json", 'utf8');
       }
       var result = await askAI(name.replace("-", " "));
       saveData(name, result);
