@@ -19,7 +19,7 @@ app.use('/', express.static(path.join(__dirname, 'frontpage/public')));
 
 //Footsteps module
 app.use("/footsteps", express.static(path.join(__dirname, 'footsteps/public')));
-const responder = require('footsteps/routes/responder');
+const responder = require('./footsteps/routes/responder');
 app.use('/footsteps', responder);
 
 // catch 404 and forward to error handler
