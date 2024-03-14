@@ -1,0 +1,43 @@
+
+[
+    {
+        "city": "Wimbledon",
+        "country": "United Kingdom",
+        "longitude": -0.2356,
+        "latitude": 51.4215,
+        "start_year": 1947,
+        "end_year": 0,
+        "description": "Geoffrey Hinton was born in Wimbledon, London, United Kingdom in 1947.",
+        "is_deceased": false
+    },
+    {
+        "city": "Edinburgh",
+        "country": "United Kingdom",
+        "longitude": -3.1883,
+        "latitude": 55.9533,
+        "start_year": 1972,
+        "end_year": 1975,
+        "description": "Hinton studied at the University of Edinburgh from 1972 to 1975, focusing on experimental psychology.",
+        "is_deceased": false
+    },
+    {
+        "city": "Cambridge",
+        "country": "United Kingdom",
+        "longitude": 0.1276,
+        "latitude": 52.2053,
+        "start_year": 1967,
+        "end_year": 1970,
+        "description": "Geoffrey Hinton attended King's College, Cambridge, from 1967 to 1970.",
+        "is_deceased": false
+    },
+    {
+        "city": "Toronto",
+        "country": "Canada",
+        "longitude": -79.3832,
+        "latitude": 43.6532,
+        "start_year": 1987,
+        "end_year": 0,
+        "description": "Hinton has been affiliated with the University of Toronto, where he continued his research in machine learning and AI.",
+        "is_deceased": false
+    }
+]

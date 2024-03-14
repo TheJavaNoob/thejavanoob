@@ -1,0 +1,43 @@
+
+[
+    {
+        "city": "Pretoria",
+        "country": "South Africa",
+        "longitude": 28.2293,
+        "latitude": -25.7479,
+        "start_year": 1971,
+        "end_year": 1988,
+        "description": "Elon Musk was born in Pretoria, South Africa. He spent his early years here before moving to pursue further education and career opportunities.",
+        "is_deceased": false
+    },
+    {
+        "city": "Pretoria",
+        "country": "South Africa",
+        "longitude": 28.2293,
+        "latitude": -25.7479,
+        "start_year": 1988,
+        "end_year": 1997,
+        "description": "During this period, Elon Musk continued his education and early career pursuits in Pretoria, South Africa.",
+        "is_deceased": false
+    },
+    {
+        "city": "Pretoria",
+        "country": "South Africa",
+        "longitude": 28.2293,
+        "latitude": -25.7479,
+        "start_year": 1997,
+        "end_year": 2002,
+        "description": "Elon Musk continued to reside in Pretoria, South Africa, and began to make significant strides in his entrepreneurial endeavors during this time.",
+        "is_deceased": false
+    },
+    {
+        "city": "Various locations",
+        "country": "Various countries",
+        "longitude": "",
+        "latitude": "",
+        "start_year": 2002,
+        "end_year": 2024,
+        "description": "From 2002 onwards, Elon Musk's career led him to various locations across different countries due to his involvement in companies like SpaceX, Tesla, and more.",
+        "is_deceased": false
+    }
+]

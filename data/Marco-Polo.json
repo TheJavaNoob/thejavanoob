@@ -1,0 +1,33 @@
+
+[
+    {
+        "city": "Venice",
+        "country": "Italy",
+        "longitude": 12.3155,
+        "latitude": 45.4408,
+        "start_year": 1254,
+        "end_year": -1,
+        "description": "Marco Polo was born in Venice, Italy, on September 15, 1254.",
+        "is_deceased": false
+    },
+    {
+        "city": "Asia (various regions during travels)",
+        "country": "Various",
+        "longitude": "Various",
+        "latitude": "Various",
+        "start_year": 1271,
+        "end_year": 1295,
+        "description": "Marco Polo traveled through various regions in Asia along the Silk Road between 1271 and 1295. He spent significant time in China, serving in the court of Kublai Khan.",
+        "is_deceased": false
+    },
+    {
+        "city": "Venice",
+        "country": "Italy",
+        "longitude": 12.3155,
+        "latitude": 45.4408,
+        "start_year": 1295,
+        "end_year": 1324,
+        "description": "Marco Polo returned to Venice, Italy, in 1295 after his extensive travels through Asia. He died in Venice on January 8, 1324.",
+        "is_deceased": true
+    }
+]

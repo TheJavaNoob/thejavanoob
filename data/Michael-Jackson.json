@@ -1,0 +1,33 @@
+
+[
+    {
+        "city": "Gary",
+        "country": "United States",
+        "longitude": -87.3464,
+        "latitude": 41.5934,
+        "start_year": 1958,
+        "end_year": 1968,
+        "description": "Michael Jackson was born on August 29, 1958, in Gary, Indiana. He began performing with his four brothers in the pop group the Jackson 5 during his childhood.",
+        "is_deceased": false
+    },
+    {
+        "city": "Encino",
+        "country": "United States",
+        "longitude": -118.5014,
+        "latitude": 34.1597,
+        "start_year": 1969,
+        "end_year": 1971,
+        "description": "The Jackson family moved to Encino, California, in 1969 where Michael continued to rise to fame as part of the Jackson 5.",
+        "is_deceased": false
+    },
+    {
+        "city": "Los Angeles",
+        "country": "United States",
+        "longitude": -118.2437,
+        "latitude": 34.0522,
+        "start_year": 1971,
+        "end_year": 2009,
+        "description": "Michael Jackson lived most of his adult life in Los Angeles, California, where he pursued his solo career and became known as the 'King of Pop'.",
+        "is_deceased": true
+    }
+]

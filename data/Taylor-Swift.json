@@ -1,0 +1,53 @@
+
+[
+    {
+        "city": "Reading",
+        "country": "Pennsylvania, USA",
+        "longitude": -75.926737,
+        "latitude": 40.335648,
+        "start_year": 1989,
+        "end_year": 2003,
+        "description": "Taylor Swift was born on December 13, 1989, in Reading, Pennsylvania. She spent her early years here before moving to Tennessee to pursue her music career.",
+        "is_deceased": false
+    },
+    {
+        "city": "Nashville",
+        "country": "Tennessee, USA",
+        "longitude": -86.7816,
+        "latitude": 36.1627,
+        "start_year": 2004,
+        "end_year": 2014,
+        "description": "Swift moved to Nashville in 2004 to kickstart her country music career. She quickly rose to fame in the country music scene during her time here.",
+        "is_deceased": false
+    },
+    {
+        "city": "New York City",
+        "country": "New York, USA",
+        "longitude": -74.006,
+        "latitude": 40.7128,
+        "start_year": 2014,
+        "end_year": 2018,
+        "description": "In 2014, Taylor Swift relocated to New York City, where she found new inspiration for her music. She embraced the city life and continued to expand her career.",
+        "is_deceased": false
+    },
+    {
+        "city": "Watch Hill",
+        "country": "Rhode Island, USA",
+        "longitude": -71.8361,
+        "latitude": 41.3138,
+        "start_year": 2013,
+        "end_year": 2018,
+        "description": "Swift purchased a mansion in Watch Hill, Rhode Island, in 2013. This coastal retreat provided her with privacy and tranquility away from the spotlight.",
+        "is_deceased": false
+    },
+    {
+        "city": "Manhattan",
+        "country": "New York, USA",
+        "longitude": -73.935242,
+        "latitude": 40.73061,
+        "start_year": 2016,
+        "end_year": 2024,
+        "description": "Taylor Swift owned multiple properties in Manhattan, making it a significant part of her life over the years. She enjoyed the city's vibrancy and cultural richness.",
+        "is_deceased": false
+    }
+]

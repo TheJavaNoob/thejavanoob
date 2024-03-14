@@ -1,0 +1,63 @@
+
+[
+    {
+        "city": "Genoa",
+        "country": "Italy",
+        "longitude": 9.19,
+        "latitude": 44.41,
+        "start_year": 1451,
+        "end_year": 1476,
+        "description": "Christopher Columbus was born in Genoa, Italy in 1451. He grew up in this bustling port city and likely began his seafaring career here.",
+        "is_deceased": false
+    },
+    {
+        "city": "Portugal",
+        "country": "Portugal",
+        "longitude": -9.14,
+        "latitude": 38.72,
+        "start_year": 1476,
+        "end_year": 1485,
+        "description": "Columbus settled in Portugal around 1476. He worked as a mapmaker and gained knowledge and experience in navigation during his time here.",
+        "is_deceased": false
+    },
+    {
+        "city": "Palos de la Frontera",
+        "country": "Spain",
+        "longitude": -6.89,
+        "latitude": 37.23,
+        "start_year": 1492,
+        "end_year": 1493,
+        "description": "Columbus began his historic first voyage from Palos de la Frontera, Spain, in 1492, setting sail to find a new route to Asia.",
+        "is_deceased": false
+    },
+    {
+        "city": "Valladolid",
+        "country": "Spain",
+        "longitude": -4.73,
+        "latitude": 41.65,
+        "start_year": 1506,
+        "end_year": 1506,
+        "description": "Christopher Columbus passed away in Valladolid, Spain in 1506 at the age of 55. He was buried here before his remains were later moved to Seville.",
+        "is_deceased": true
+    },
+    {
+        "city": "Seville",
+        "country": "Spain",
+        "longitude": -5.98,
+        "latitude": 37.39,
+        "start_year": 1506,
+        "end_year": 1506,
+        "description": "After his death, Columbus was buried in Seville, Spain, at the Catedral de Sevilla. His remains were later moved to the Faro a Colón in the Dominican Republic.",
+        "is_deceased": true
+    },
+    {
+        "city": "Santo Domingo Este",
+        "country": "Dominican Republic",
+        "longitude": -69.86,
+        "latitude": 18.49,
+        "start_year": 1506,
+        "end_year": 1506,
+        "description": "Christopher Columbus' remains were later interred at the Faro a Colón in Santo Domingo Este, Dominican Republic, as per his wishes.",
+        "is_deceased": true
+    }
+]

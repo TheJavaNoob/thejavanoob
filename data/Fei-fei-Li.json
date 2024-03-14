@@ -1,0 +1,48 @@
+
+[
+    {
+        "city": "Beijing",
+        "country": "China",
+        "longitude": "116.4074",
+        "latitude": "39.9042",
+        "start_year": "1976",
+        "end_year": "1995",
+        "description": "Fei-Fei Li was born in Beijing, China in 1976."
+    },
+    {
+        "city": "Chengdu",
+        "country": "China",
+        "longitude": "104.0667",
+        "latitude": "30.6667",
+        "start_year": "1995",
+        "end_year": "1999",
+        "description": "Fei-Fei Li lived in Chengdu, China during her high school years."
+    },
+    {
+        "city": "Princeton",
+        "country": "United States",
+        "longitude": "-74.6672",
+        "latitude": "40.3573",
+        "start_year": "1995",
+        "end_year": "1999",
+        "description": "Fei-Fei Li attended Princeton University for her undergraduate studies."
+    },
+    {
+        "city": "Pasadena",
+        "country": "United States",
+        "longitude": "-118.1445",
+        "latitude": "34.1478",
+        "start_year": "2001",
+        "end_year": "2005",
+        "description": "Fei-Fei Li pursued her Ph.D. at the California Institute of Technology in Pasadena."
+    },
+    {
+        "city": "Stanford",
+        "country": "United States",
+        "longitude": "-122.1661",
+        "latitude": "37.4241",
+        "start_year": "2009",
+        "end_year": "Present",
+        "description": "Fei-Fei Li is currently a professor at Stanford University."
+    }
+]

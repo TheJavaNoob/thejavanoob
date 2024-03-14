@@ -1,0 +1,162 @@
+[
+    {
+        "city": "碎叶",
+        "country": "吉尔吉斯斯坦",
+        "longitude": 72.779721,
+        "latitude": 43.146389,
+        "start_year": 701,
+        "end_year": 705,
+        "description": "",
+        "is_deceased": false
+    },
+    {
+        "city": "四川",
+        "country": "中国",
+        "longitude": 102.259194,
+        "latitude": 30.980737,
+        "start_year": 705,
+        "end_year": 726,
+        "description": "",
+        "is_deceased": false
+    },
+    {
+        "city": "扬州",
+        "country": "江苏",
+        "longitude": 119.412966,
+        "latitude": 32.394209,
+        "start_year": 726,
+        "end_year": 727,
+        "description": "",
+        "is_deceased": false
+    },
+    {
+        "city": "安陆",
+        "country": "湖北",
+        "longitude": 113.688419,
+        "latitude": 31.255198,
+        "start_year": 727,
+        "end_year": 730,
+        "description": "",
+        "is_deceased": false
+    },
+    {
+        "city": "长安（西安）",
+        "country": "陕西",
+        "longitude": 108.940175,
+        "latitude": 34.341568,
+        "start_year": 730,
+        "end_year": 731,
+        "description": "",
+        "is_deceased": false
+    },
+    {
+        "city": "洛阳",
+        "country": "河南",
+        "longitude": 112.4536,
+        "latitude": 34.6202,
+        "start_year": 731,
+        "end_year": 733,
+        "description": "",
+        "is_deceased": false
+    },
+    {
+        "city": "安陆",
+        "country": "湖北",
+        "longitude": 113.688419,
+        "latitude": 31.255198,
+        "start_year": 733,
+        "end_year": 735,
+        "description": "",
+        "is_deceased": false
+    },
+    {
+        "city": "长安（西安）",
+        "country": "陕西",
+        "longitude": 108.940175,
+        "latitude": 34.341568,
+        "start_year": 735,
+        "end_year": 744,
+        "description": "",
+        "is_deceased": false
+    },
+    {
+        "city": "济南",
+        "country": "山东",
+        "longitude": 117.1200,
+        "latitude": 36.6512,
+        "start_year": 744,
+        "end_year": 755,
+        "description": "",
+        "is_deceased": false
+    },
+    {
+        "city": "当涂",
+        "country": "安徽",
+        "longitude": 116.569059,
+        "latitude": 31.57513,
+        "start_year": 755,
+        "end_year": 755,
+        "description": "",
+        "is_deceased": false
+    },
+    {
+        "city": "嵊州",
+        "country": "浙江",
+        "longitude": 120.4,
+        "latitude": 29.3,
+        "start_year": 755,
+        "end_year": 755,
+        "description": "",
+        "is_deceased": false
+    },
+    {
+        "city": "溧阳",
+        "country": "江苏",
+        "longitude": 119.0,
+        "latitude": 31.0,
+        "start_year": 755,
+        "end_year": 755,
+        "description": "",
+        "is_deceased": false
+    },
+    {
+        "city": "金陵（南京）",
+        "country": "江苏",
+        "longitude": 118.6,
+        "latitude": 31.7,
+        "start_year": 755,
+        "end_year": 755,
+        "description": "",
+        "is_deceased": false
+    },
+    {
+        "city": "庐山",
+        "country": "江西",
+        "longitude": 116.0,
+        "latitude": 29.5,
+        "start_year": 755,
+        "end_year": 757,
+        "description": "",
+        "is_deceased": false
+    },
+    {
+        "city": "金陵（南京）",
+        "country": "江苏",
+        "longitude": 118.6,
+        "latitude": 31.7,
+        "start_year": 757,
+        "end_year": 761,
+        "description": "",
+        "is_deceased": false
+    },
+    {
+        "city": "当涂",
+        "country": "安徽",
+        "longitude": 116.569059,
+        "latitude": 31.57513,
+        "start_year": 761,
+        "end_year": 762,
+        "description": "",
+        "is_deceased": true
+    }
+]

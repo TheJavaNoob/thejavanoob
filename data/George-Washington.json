@@ -1,0 +1,63 @@
+
+[
+    {
+        "city": "Westmoreland County",
+        "country": "Virginia",
+        "longitude": "-76.7414",
+        "latitude": "38.1989",
+        "start_year": 1732,
+        "end_year": 1735,
+        "description": "George Washington was born on February 22, 1732, in Westmoreland County, Virginia. As a young child, he lived on the family farm in Pope's Creek Estate. His early years in this rural setting shaped his character and instilled a strong work ethic.",
+        "is_deceased": false
+    },
+    {
+        "city": "Mount Vernon",
+        "country": "Virginia",
+        "longitude": "-77.0906",
+        "latitude": "38.7072",
+        "start_year": 1754,
+        "end_year": 1799,
+        "description": "After inheriting Mount Vernon from his brother Lawrence, George Washington made this estate his home. He expanded and managed the plantation, becoming a successful farmer and landowner. Mount Vernon became a central hub for Washington's personal and political life.",
+        "is_deceased": false
+    },
+    {
+        "city": "Philadelphia",
+        "country": "Pennsylvania",
+        "longitude": "-75.1652",
+        "latitude": "39.9526",
+        "start_year": 1775,
+        "end_year": 1799,
+        "description": "During the Revolutionary War, Philadelphia served as the temporary capital of the United States. Washington spent several years here overseeing the Continental Army's operations and later presided over the Constitutional Convention in 1787.",
+        "is_deceased": false
+    },
+    {
+        "city": "New York City",
+        "country": "New York",
+        "longitude": "-74.0060",
+        "latitude": "40.7128",
+        "start_year": 1789,
+        "end_year": 1790,
+        "description": "As the first President of the United States, George Washington took up residence in New York City, the nation's capital at the time. He was inaugurated at Federal Hall and worked to establish the foundations of the new government.",
+        "is_deceased": false
+    },
+    {
+        "city": "Philadelphia",
+        "country": "Pennsylvania",
+        "longitude": "-75.1652",
+        "latitude": "39.9526",
+        "start_year": 1790,
+        "end_year": 1797,
+        "description": "After New York, Philadelphia became the temporary capital once again. Washington served the remainder of his presidency in Philadelphia, overseeing the early years of the federal government and setting important precedents.",
+        "is_deceased": false
+    },
+    {
+        "city": "Mount Vernon",
+        "country": "Virginia",
+        "longitude": "-77.0906",
+        "latitude": "38.7072",
+        "start_year": 1797,
+        "end_year": 1799,
+        "description": "In his final years, Washington retired to Mount Vernon. He focused on managing his estate, engaging in agriculture, and overseeing various projects. Washington passed away at Mount Vernon on December 14, 1799.",
+        "is_deceased": true
+    }
+]

@@ -1,0 +1,103 @@
+
+[
+    {
+        "city": "Honolulu",
+        "country": "United States",
+        "longitude": -157.8583,
+        "latitude": 21.3069,
+        "start_year": 1961,
+        "end_year": 1967,
+        "description": "Barack Obama was born on August 4, 1961, at Kapiʻolani Medical Center for Women & Children in Honolulu, Hawaii.",
+        "is_deceased": false
+    },
+    {
+        "city": "Jakarta",
+        "country": "Indonesia",
+        "longitude": 106.8272,
+        "latitude": -6.1751,
+        "start_year": 1967,
+        "end_year": 1971,
+        "description": "Obama lived in Jakarta, Indonesia, from 1967 to 1971 with his mother and stepfather. He attended local schools during this time.",
+        "is_deceased": false
+    },
+    {
+        "city": "Honolulu",
+        "country": "United States",
+        "longitude": -157.8583,
+        "latitude": 21.3069,
+        "start_year": 1971,
+        "end_year": 1979,
+        "description": "After returning to Honolulu in 1971, Obama finished high school at Punahou School. He spent his teenage years in Hawaii.",
+        "is_deceased": false
+    },
+    {
+        "city": "Los Angeles",
+        "country": "United States",
+        "longitude": -118.2437,
+        "latitude": 34.0522,
+        "start_year": 1979,
+        "end_year": 1981,
+        "description": "Obama attended Occidental College in Los Angeles from 1979 to 1981 before transferring to Columbia University in New York City.",
+        "is_deceased": false
+    },
+    {
+        "city": "New York City",
+        "country": "United States",
+        "longitude": -74.006,
+        "latitude": 40.7128,
+        "start_year": 1981,
+        "end_year": 1983,
+        "description": "In New York City, Obama attended Columbia University and graduated in 1983 with a degree in political science.",
+        "is_deceased": false
+    },
+    {
+        "city": "Chicago",
+        "country": "United States",
+        "longitude": -87.6298,
+        "latitude": 41.8781,
+        "start_year": 1985,
+        "end_year": 1988,
+        "description": "Obama worked as a community organizer in Chicago from 1985 to 1988, focusing on issues of poverty and unemployment in the city.",
+        "is_deceased": false
+    },
+    {
+        "city": "Cambridge",
+        "country": "United States",
+        "longitude": -71.1056,
+        "latitude": 42.3736,
+        "start_year": 1988,
+        "end_year": 1991,
+        "description": "Obama attended Harvard Law School in Cambridge, Massachusetts, where he was the first black president of the Harvard Law Review.",
+        "is_deceased": false
+    },
+    {
+        "city": "Chicago",
+        "country": "United States",
+        "longitude": -87.6298,
+        "latitude": 41.8781,
+        "start_year": 1991,
+        "end_year": 2005,
+        "description": "Returning to Chicago, Obama taught constitutional law at the University of Chicago and worked as a civil rights attorney and a lecturer.",
+        "is_deceased": false
+    },
+    {
+        "city": "Washington, D.C.",
+        "country": "United States",
+        "longitude": -77.0369,
+        "latitude": 38.9072,
+        "start_year": 2005,
+        "end_year": 2009,
+        "description": "Obama served as a U.S. Senator from Illinois before becoming the 44th President of the United States, with his inauguration in Washington, D.C., in 2009.",
+        "is_deceased": false
+    },
+    {
+        "city": "Washington, D.C.",
+        "country": "United States",
+        "longitude": -77.0369,
+        "latitude": 38.9072,
+        "start_year": 2009,
+        "end_year": 2017,
+        "description": "During his presidency, Barack Obama resided in the White House in Washington, D.C., from 2009 to 2017.",
+        "is_deceased": false
+    }
+]

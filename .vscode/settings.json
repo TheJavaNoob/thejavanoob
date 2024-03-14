@@ -1,0 +1,4 @@
+{
+      "appService.defaultWebAppToDeploy": "/subscriptions/df4cf62e-8c47-46e8-a5c2-d190e7363105/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/historic-footsteps",
+      "appService.deploySubpath": "."
+}
