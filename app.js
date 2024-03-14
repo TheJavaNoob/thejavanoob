@@ -14,6 +14,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
+//Front page
+app.use('/', express.static(path.join(__dirname, 'frontpage/public')));
 
 //Footsteps module
 app.use("/footsteps", express.static(path.join(__dirname, 'footsteps/public')));
