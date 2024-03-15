@@ -1,25 +1,380 @@
 <html>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-      crossorigin="anonymous"></script>
+<script src="javascript/jquery-3.7.1.min.js"></script>
+<title>TheJavaNoob's Website</title>
+<style>
+      body {
+            background-color: #333;
+            /*-ms-scroll-snap-type: y mandatory;
+            scroll-snap-type: y mandatory;*/
+      }
+
+      * {
+            box-sizing: border-box;
+      }
+
+      .header {
+            display: flex;
+            height: 100vh;
+            flex-direction: column;
+            justify-content: flex-start;
+      }
+
+      .header-img {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            top: -20%;
+      }
+
+      .header-img h1 {
+            position: absolute;
+            text-align: center;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            z-index: 1;
+
+      }
+
+
+      .header-img img {
+            position: relative;
+            width: 100%;
+            bottom: 0px;
+            max-height: 90%;
+            min-height: 90%;
+            object-fit: cover;
+      }
+
+
+      .picker-container {
+            position: absolute;
+            bottom: 0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-self: center;
+            background: #333;
+            margin-left: 20%;
+            margin-right: 20%;
+            padding-top: 0.5em;
+            padding-bottom: 0.5em;
+            width: 100%;
+            border-bottom: 1px solid #888;
+      }
+
+      .title-text {
+            color: white;
+            text-align: left;
+            word-spacing: 0.2em;
+            font-family: "Helvetica Neue";
+            font-weight: 400;
+            font-size: calc(.5rem + 2.4vw);
+      }
+
+      .picker {
+            display: inline-grid;
+            border-radius: 15px;
+            position: relative;
+            padding-right: 1rem;
+            background: #333;
+            color: white;
+            grid-template-columns: repeat(4, fit-content(500px));
+            position: relative;
+            justify-content: center;
+            width: 0;
+            transform: scaleX(0%);
+      }
+
+      .picker img {
+            height: 1.2em;
+      }
+
+      .picker:before,
+      .picker:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2.2em;
+            pointer-events: none;
+      }
+
+      .picker:before {
+            top: -0.1em;
+            background: linear-gradient(#333, #30303000);
+      }
+
+      .picker:after {
+            bottom: 0;
+            height: 2.4em;
+            background: linear-gradient(#30303000, #333);
+
+      }
+
+      .picker-window {
+            position: absolute;
+            height: 1.4em;
+            left: 0;
+            top: 50%;
+            transform: translateY(-65%);
+            width: 100%;
+            pointer-events: none;
+      }
+
+      .picker ul {
+            -ms-overflow-style: none;
+            max-height: 4em;
+            overflow-y: scroll;
+            margin-right: 1em;
+            -ms-scroll-snap-type: y mandatory;
+            scroll-snap-type: y mandatory;
+            padding-bottom: 4em;
+            padding-top: 4em;
+            margin-bottom: 0;
+      }
+
+      .picker ul::-webkit-scrollbar {
+            display: none;
+      }
+
+      .picker li {
+            scroll-snap-align: center;
+            height: 1.4em;
+            text-align: left;
+            word-spacing: 0.2em;
+            list-style: none;
+
+      }
+
+      .content {
+            background-color: #333;
+            margin-left: 20%;
+            margin-right: 20%;
+            padding-top: 9em;
+            height: 100vh;
+            -ms-scroll-snap-align: start;
+            scroll-snap-align: start;
+      }
+
+      h1,
+      h2,
+      a,
+      p {
+            color: white;
+            font-family: "Helvetica Neue";
+      }
+
+      hr {
+            width: 50%;
+            height: 2px;
+            margin-right: auto;
+            margin-left: 0;
+      }
+
+      a:hover {
+            color: #e0e0e0;
+      }
+
+      .content p,
+      a {
+            font-size: 1.4em;
+            line-height: 120%;
+      }
+</style>
+
+<script>
+      var headerHeight;
+      var screenHeight;
+      var listStart;
+      var lineHeight;
+      var scrollStart;
+      var auto = true;
+      $(document).ready(function () {
+            headerHeight = document.querySelector(".picker-container").offsetTop;
+            screenHeight = document.querySelector("#content-about").offsetTop;
+            listStart = document.querySelector('#li-development').offsetTop;
+            lineHeight = document.querySelector('#li-research').offsetTop - listStart;
+            scrollStart = document.querySelector(".picker ul").scrollTop;
+            $(".picker ul").on("scroll", function () {
+                  var offset = $(this).scrollTop();
+                  document.querySelectorAll(".picker ul li").forEach(entry => {
+                        if (!auto && entry.offsetTop - listStart == offset - scrollStart) {
+                              document.querySelector("#content-" + entry.id.substring(3)).scrollIntoView({
+                                    behavior: "smooth"
+                              });
+                        }
+                  });
+            });
+      });
+
+      $(window).resize(function () {
+            screenHeight = document.querySelector("#content-about").offsetTop;
+            listStart = document.querySelector('#li-development').offsetTop;
+            lineHeight = document.querySelector('#li-research').offsetTop - listStart;
+            scrollStart = document.querySelector(".picker ul").scrollTop % lineHeight;
+      });
+      var cont_prev;
+      $(window).scroll(function () {
+            var scrollTop = document.body.scrollTop;
+            var delta = (scrollTop - screenHeight);
+
+            var delta_cap = (delta - screenHeight * 0.5) / (screenHeight * 0.2);
+            if (delta_cap > 1) delta_cap = 1;
+            if (delta_cap < 0) delta_cap = 0;
+            $(".picker").css({
+                  width: (delta_cap * 8) + "em",
+                  transform: "scaleX(" + delta_cap + ")"
+            });
+            if (scrollTop < headerHeight) {
+                  $(".picker-container").css({
+                        position: "absolute",
+                        bottom: "0px",
+                        top: "initial"
+                  })
+            } else {
+                  $(".picker-container").css({
+                        position: "fixed",
+                        top: "0px",
+                        bottom: "initial"
+                  });
+
+                  document.querySelectorAll('.content').forEach(content => {
+                        if (content.offsetTop > scrollTop && content.offsetTop < scrollTop + screenHeight * 0.5) {
+                              if (cont_prev != content.id) {
+                                    auto = true;
+                                    cont_prev = content.id;
+                                    if (content.id.substring(8) == "about") return;
+                                    document.querySelector(".picker ul").scrollTo({
+                                          top: document.querySelector("#li-" + content.id.substring(8)).offsetTop - listStart + scrollStart,
+                                          behavior: 'smooth'
+                                    });
+                                    setTimeout(() => {
+                                          auto = false;
+                                    }, 500);
+                              }
+                        }
+                  });
+            }
+      });
+
+
+
+</script>
 
 <body>
-      <div class="container">
-            <div class="row">
-                  <div class="col-md-12">
-                        <h1>Welcome to Steve's Website</h1>
-                        <p> An undergraduate student in Zhejiang University-University of Illinois Urbana-Ch </p>
-                        <p> Check out the following links to see what I've been working on. </p>
+      <div class="header">
+            <div class="header-img">
+                  <img src="images/header.jpg" />
+                  <div style="height: 100%">
+                        <h1>Welcome to</h1>
+                  </div>
+            </div>
+
+            <div class="picker-container">
+                  <span class="title title-text">TheJavaNoob's</span>
+                  <div class="picker">
                         <ul>
-                              <li>
-                                    <a href="/footsteps">Footsteps</a>
-                                    <p>A website to visualize the footsteps of historic figures. Powered by AI.</p>
+                              <li id="li-development" class="title-text">
+
+                                    <img src="icons/development.png" />
+                              </li>
+                              <li id="li-research" class="title-text">
+
+                                    <img src="icons/research.png" />
+                              </li>
+                              <li id="li-music" class="title-text">
+
+                                    <img src="icons/music.png" />
+                              </li>
+                              <li id="li-running" class="title-text">
+
+                                    <img src="icons/running.png" />
+                              </li>
+                              <li id="li-language" class="title-text">
+
+                                    <img src="icons/language.png" />
+                              </li>
+                              <li id="li-writing" class="title-text">
+
+                                    <img src="icons/writing.png" />
                               </li>
                         </ul>
                   </div>
+                  <span class="title-text">Hut</span>
             </div>
       </div>
+      <div id="content-about" class="content" style="padding-top: 0;">
+            <h1>About Me</h1>
+            <p> Hello Internet! I am Steve (Haoxiang) Lin, an undergraduate at Zhejiang University-University of
+                  Illinois Urbana-Champaign joint institute (that's a mouthful). I am an enthusiastic software
+                  developer, a novice researcher, a hardcore classical music fan, an average runner, and a
+                  literature and linguistic nerd.
+            </p>
+      </div>
+      <div id="content-development" class="content">
+            <h1> Development </h1>
+            <p>I do programming with an unhealthy number of lanuages. I did projects in VB, HTML/JS/CSS, Python, C+/Qt
+                  and counting. I have also touched Swift, Objective-C and C#. (No, Java is not on here. I had enough
+                  of downloading JVM everywhere and ditched it long ago. It only lives in the name now).
+            <p>Check out my GitHub repos:</p>
+            <a href="https://www.github.com/thejavanoob">
+                  https://www.github.com/thejavanoob
+            </a>
+
+            <p>Explore my recent projects here.</p>
+            <br />
+            <h2><a href="/footsteps">Footsteps</a></h2>
+            <hr>
+            <p>A website to visualize the footsteps of historic figures. Powered by AI.</p>
+            <a href="/footsteps">Try it out.</a>
+      </div>
+
+      <div id="content-research" class="content">
+            <h1> Research </h1>
+            <p>I am still <del>barging my way</del> getting into the AcADemIc CoMmuNItY, with currently no publications
+                  (or even ongoing projects
+                  training). In the near term, I plan to research music generation. Long term (postgrad), I might do
+                  Embodied AI.
+            </p>
+
+      </div>
+      <div id="content-music" class="content">
+            <h1> Music </h1>
+            <p>I am a diehard (exclusive) classical music fan, having listened to 500+ pieces from the Baroque period
+                  to the 21st century (Yes, this is still Classical music).
+            <p> I also play the piano and I spend more time on it than I would like. Rachmaninov's second piano sonata
+                  has taken 1.5 years of my time, and I am only 2/3 of the way through it.</p>
+            </p>
+      </div>
+      <div id="content-running" class="content">
+            <h1> Running & Sports </h1>
+            <p>I am an average runner that covers all distances (versatile? maybe. fast? no.) My main event seems to
+                  be the 400m with a PB of 56.91s. But I do still enjoy a good long run for it represents the lonely
+                  and self-transcending nature of running.
+            </p>
+            <p>I am also <del>barging my way</del> getting into swimming and cycling. My goal is to run a
+                  marathon and complete a triathlon during college.
+            </p>
+      </div>
+      <div id="content-language" class="content">
+            <h1> Language Learning & Linguistics </h1>
+            <p>I am currently learning German and Japanese, which means at some point I could be considered
+                  quadro-lingo. It's impossible to not be interested in linguistics after learning so many languages,
+                  especially phonetics (aka I LiKe MakInG wiREd SoUnDs).
+            </p>
+      </div>
+      <div id="content-writing" class="content">
+            <h1> Reading & Writing </h1>
+            <p>I like reading Classical Chinese literature and Contemporary Western literature, and I have written
+                  some poems and texts from time to time. I wish I had more time to read and write. Perhaps I have
+                  not reached the state of mind to be engulfed in literature.
+            </p>
+      </div>
+</body>
 
 </html>
