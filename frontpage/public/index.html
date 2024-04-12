@@ -1,275 +1,38 @@
 <html>
 <script src="javascript/jquery-3.7.1.min.js"></script>
 <title>TheJavaNoob's Website</title>
-<style>
-      body {
-            background-color: #333;
-            /*-ms-scroll-snap-type: y mandatory;
-            scroll-snap-type: y mandatory;*/
-      }
-
-      * {
-            box-sizing: border-box;
-      }
-
-      .header {
-            display: flex;
-            height: 100vh;
-            flex-direction: column;
-            justify-content: flex-start;
-      }
-
-      .header-img {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-            position: relative;
-            width: 100%;
-            height: 100%;
-            top: -20%;
-      }
-
-      .header-img h1 {
-            position: absolute;
-            text-align: center;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            margin: auto;
-            z-index: 1;
-
-      }
-
-
-      .header-img img {
-            position: relative;
-            width: 100%;
-            bottom: 0px;
-            max-height: 90%;
-            min-height: 90%;
-            object-fit: cover;
-      }
-
-
-      .picker-container {
-            position: absolute;
-            bottom: 0px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            align-self: center;
-            background: #333;
-            margin-left: 20%;
-            margin-right: 20%;
-            padding-top: 0.5em;
-            padding-bottom: 0.5em;
-            width: 100%;
-            border-bottom: 1px solid #888;
-      }
-
-      .title-text {
-            color: white;
-            text-align: left;
-            word-spacing: 0.2em;
-            font-family: "Helvetica Neue";
-            font-weight: 400;
-            font-size: calc(.5rem + 2.4vw);
-      }
-
-      .picker {
-            display: inline-grid;
-            border-radius: 15px;
-            position: relative;
-            padding-right: 1rem;
-            background: #333;
-            color: white;
-            grid-template-columns: repeat(4, fit-content(500px));
-            position: relative;
-            justify-content: center;
-            width: 0;
-            transform: scaleX(0%);
-      }
-
-      .picker img {
-            height: 1.2em;
-      }
-
-      .picker:before,
-      .picker:after {
-            content: "";
-            position: absolute;
-            width: 100%;
-            height: 2.2em;
-            pointer-events: none;
-      }
-
-      .picker:before {
-            top: -0.1em;
-            background: linear-gradient(#333, #30303000);
-      }
-
-      .picker:after {
-            bottom: 0;
-            height: 2.4em;
-            background: linear-gradient(#30303000, #333);
-
-      }
-
-      .picker-window {
-            position: absolute;
-            height: 1.4em;
-            left: 0;
-            top: 50%;
-            transform: translateY(-65%);
-            width: 100%;
-            pointer-events: none;
-      }
-
-      .picker ul {
-            -ms-overflow-style: none;
-            max-height: 4em;
-            overflow-y: scroll;
-            margin-right: 1em;
-            -ms-scroll-snap-type: y mandatory;
-            scroll-snap-type: y mandatory;
-            padding-bottom: 4em;
-            padding-top: 4em;
-            margin-bottom: 0;
-      }
-
-      .picker ul::-webkit-scrollbar {
-            display: none;
-      }
-
-      .picker li {
-            scroll-snap-align: center;
-            height: 1.4em;
-            text-align: left;
-            word-spacing: 0.2em;
-            list-style: none;
-
-      }
-
-      .content {
-            background-color: #333;
-            margin-left: 20%;
-            margin-right: 20%;
-            padding-top: 9em;
-            height: 100vh;
-            -ms-scroll-snap-align: start;
-            scroll-snap-align: start;
-      }
-
-      h1,
-      h2,
-      a,
-      p {
-            color: white;
-            font-family: "Helvetica Neue";
-      }
-
-      hr {
-            width: 50%;
-            height: 2px;
-            margin-right: auto;
-            margin-left: 0;
-      }
-
-      a:hover {
-            color: #e0e0e0;
-      }
-
-      .content p,
-      a {
-            font-size: 1.4em;
-            line-height: 120%;
-      }
-</style>
-
-<script>
-      var headerHeight;
-      var screenHeight;
-      var listStart;
-      var lineHeight;
-      var scrollStart;
-      var auto = true;
-      $(document).ready(function () {
-            headerHeight = document.querySelector(".picker-container").offsetTop;
-            screenHeight = document.querySelector("#content-about").offsetTop;
-            listStart = document.querySelector('#li-development').offsetTop;
-            lineHeight = document.querySelector('#li-research').offsetTop - listStart;
-            scrollStart = document.querySelector(".picker ul").scrollTop;
-            $(".picker ul").on("scroll", function () {
-                  var offset = $(this).scrollTop();
-                  document.querySelectorAll(".picker ul li").forEach(entry => {
-                        if (!auto && entry.offsetTop - listStart == offset - scrollStart) {
-                              document.querySelector("#content-" + entry.id.substring(3)).scrollIntoView({
-                                    behavior: "smooth"
-                              });
-                        }
-                  });
-            });
-      });
-
-      $(window).resize(function () {
-            screenHeight = document.querySelector("#content-about").offsetTop;
-            listStart = document.querySelector('#li-development').offsetTop;
-            lineHeight = document.querySelector('#li-research').offsetTop - listStart;
-            scrollStart = document.querySelector(".picker ul").scrollTop % lineHeight;
-      });
-      var cont_prev;
-      $(window).scroll(function () {
-            var scrollTop = document.body.scrollTop;
-            var delta = (scrollTop - screenHeight);
-
-            var delta_cap = (delta - screenHeight * 0.5) / (screenHeight * 0.2);
-            if (delta_cap > 1) delta_cap = 1;
-            if (delta_cap < 0) delta_cap = 0;
-            $(".picker").css({
-                  width: (delta_cap * 8) + "em",
-                  transform: "scaleX(" + delta_cap + ")"
-            });
-            if (scrollTop < headerHeight) {
-                  $(".picker-container").css({
-                        position: "absolute",
-                        bottom: "0px",
-                        top: "initial"
-                  })
-            } else {
-                  $(".picker-container").css({
-                        position: "fixed",
-                        top: "0px",
-                        bottom: "initial"
-                  });
-
-                  document.querySelectorAll('.content').forEach(content => {
-                        if (content.offsetTop > scrollTop && content.offsetTop < scrollTop + screenHeight * 0.5) {
-                              if (cont_prev != content.id) {
-                                    auto = true;
-                                    cont_prev = content.id;
-                                    if (content.id.substring(8) == "about") return;
-                                    document.querySelector(".picker ul").scrollTo({
-                                          top: document.querySelector("#li-" + content.id.substring(8)).offsetTop - listStart + scrollStart,
-                                          behavior: 'smooth'
-                                    });
-                                    setTimeout(() => {
-                                          auto = false;
-                                    }, 500);
-                              }
-                        }
-                  });
-            }
-      });
-
-
-
-</script>
+<link rel="stylesheet" href="stylesheets/style.css">
+<script src="javascript/script.js"></script>
+<meta charset="UTF-8">
 
 <body>
       <div class="header">
-            <div class="header-img">
-                  <img src="images/header.jpg" />
+            <div class="header-top">
+                  <div class="header-display">
+                        <span class="arrow" onclick="moveLeft()">&#10094;</span>
+                        <div class="header-display-content">
+                              <div class="header-display-entry">
+                                    <img src="images/header.jpg" />
+                                    <p>
+                                          Welcome to TheJavaNoob's Website
+                                    </p>
+                              </div>
+                              <div class="header-display-entry">
+                                    <img src="images/footsteps.png" />
+                                    <p>
+                                          Web App: Footsteps
+                                    </p>
+                              </div>
+                              <div class="header-display-entry">
+                                    <img src="images/midsummer.jpg" />
+                                    <p>
+                                          Music: A Midsummer Night's Dream
+                                    </p>
+                              </div>
+                        </div>
+                        <span class="arrow" onclick="moveRight()">&#10095;</span>
+                  </div>
+                  <!--img src="images/header.jpg" /-->
                   <div style="height: 100%">
                         <h1>Welcome to</h1>
                   </div>
@@ -308,30 +71,44 @@
                   <span class="title-text">Hut</span>
             </div>
       </div>
-      <div id="content-about" class="content" style="padding-top: 0;">
+      <div id="content-about" class="content" style="padding-top: 0; height: 80vh;">
             <h1>About Me</h1>
             <p> Hello Internet! I am Steve (Haoxiang) Lin, an undergraduate at Zhejiang University-University of
                   Illinois Urbana-Champaign joint institute (that's a mouthful). I am an enthusiastic software
-                  developer, a novice researcher, a hardcore classical music fan, an average runner, and a
+                  developer, a novice researcher, a diehard classical music fan, an average runner, and a
                   literature and linguistic nerd.
             </p>
+            <h2>Contact Me</h2>
+            <p>Email: <a href="mailto:haoxiang.23@intl.zju.edu.cn">haoxiang.23@intl.zju.edu.cn</a></p>
       </div>
       <div id="content-development" class="content">
             <h1> Development </h1>
-            <p>I do programming with an unhealthy number of lanuages. I did projects in VB, HTML/JS/CSS, Python, C+/Qt
-                  and counting. I have also touched Swift, Objective-C and C#. (No, Java is not on here. I had enough
+            <p>I do programming with a vast number of lanuages. I did projects in VB, HTML/JS/CSS, Python, C+/Qt,
+                  Swift and counting. I have also touched Objective-C and C#. (No, Java is not on here. I had enough
                   of downloading JVM everywhere and ditched it long ago. It only lives in the name now).
-            <p>Check out my GitHub repos:</p>
-            <a href="https://www.github.com/thejavanoob">
-                  https://www.github.com/thejavanoob
-            </a>
-
+            <p>Check out my GitHub repos:
+                  <a href="https://www.github.com/thejavanoob">
+                        https://www.github.com/thejavanoob
+                  </a>
+            </p>
             <p>Explore my recent projects here.</p>
-            <br />
-            <h2><a href="/footsteps">Footsteps</a></h2>
-            <hr>
-            <p>A website to visualize the footsteps of historic figures. Powered by AI.</p>
-            <a href="/footsteps">Try it out.</a>
+
+            <div class="content-entry">
+                  <h2><a href="/footsteps">Footsteps</a></h2>
+                  <hr>
+                  <p>A website to visualize the footsteps of historic figures. Powered by AI.</p>
+                  <img src="images/footsteps.png"/>
+                  <br>
+                  <a href="/footsteps">Try it out.</a>
+            </div>
+
+            <div class="content-entry">
+                  <h2><a href="https://github.com/TheJavaNoob/lc3debugger">VSCode LC-3 Debugger</a></h2>
+                  <hr>
+                  <p>A VSCode debugger for the educational computer system LC-3. (Work in Progress)</p>
+                  <a href="https://github.com/TheJavaNoob/lc3debugger">Source Code</a>
+            </div>
+
       </div>
 
       <div id="content-research" class="content">
@@ -343,13 +120,29 @@
             </p>
 
       </div>
+
       <div id="content-music" class="content">
             <h1> Music </h1>
             <p>I am a diehard (exclusive) classical music fan, having listened to 500+ pieces from the Baroque period
-                  to the 21st century (Yes, this is still Classical music).
+                  to the 21st century (Yes, this is still Classical music). My favorite composer is Beethoven, followed
+                  by Franz Liszt and Johannes Brahms.</p>
             <p> I also play the piano and I spend more time on it than I would like. Rachmaninov's second piano sonata
                   has taken 1.5 years of my time, and I am only 2/3 of the way through it.</p>
             </p>
+            <p> I have tried to do composing, but only made one composition. You can listen to them on Bilibili.
+            </p>
+            <div class="content-entry">
+                  <h2> A Midsummer Night's Dream</h2>
+                  <h3>Trio for Violin, Flute, and Clarinet in F major </h3>
+                  <hr>
+                  <p> This piece was inspired by a walk to the convenience store in Summer 2019, and it took 4 years to
+                        complete. The paintings in the video are modified by AI based on photos taken by me.
+                  </p>
+                  <img src="images/midsummer.jpg"/>
+                  <br>
+                  <a href="https://www.bilibili.com/video/BV1pG41117W6">
+                        Listen Here</a>
+            </div>
       </div>
       <div id="content-running" class="content">
             <h1> Running & Sports </h1>
@@ -364,16 +157,44 @@
       <div id="content-language" class="content">
             <h1> Language Learning & Linguistics </h1>
             <p>I am currently learning German and Japanese, which means at some point I could be considered
-                  quadro-lingo. It's impossible to not be interested in linguistics after learning so many languages,
+                  quadro-lingo. It's impossible to not be interested in linguistics after learning so many
+                  languages,
                   especially phonetics (aka I LiKe MakInG wiREd SoUnDs).
             </p>
+            <div class="language">
+                  <div>
+                        <img src="images/german.png" />
+                        <p>Ich learne Deutsch für fast eins Jahre, denn Ich liebe klassiche Musik, und viele stüke und
+                              lieder sind im Deutsch, und die Deutsche Leute sind sehr effizient, ich mag sehr viel
+                              ihren Kultur.</p>
+                  </div>
+                  <div>
+                        <img src="images/japanese.png" />
+                        <p>私も日本語の学生です。</p>
+                  </div>
+            </div>
       </div>
       <div id="content-writing" class="content">
             <h1> Reading & Writing </h1>
             <p>I like reading Classical Chinese literature and Contemporary Western literature, and I have written
-                  some poems and texts from time to time. I wish I had more time to read and write. Perhaps I have
-                  not reached the state of mind to be engulfed in literature.
+                  some poems and texts from time to time.
             </p>
+            <br />
+            <h2>Classical Music Portraits</h2>
+            <p> Some Classical Music tell stories. Some stories were told in the title, but most are inferred by the listener.
+                  Here, I aim to capture the essence of the stories in the form of short novels. </p>
+            </p>
+            
+            <div class="content-entry">
+                  <a href="https://publish.illinois.edu/thejavanoob/debussys-la-mer-a-portrait/">
+                        <h2>Debussy's <i>La Mer</i>: A Portrait</h2>
+                  </a>
+                  <hr>
+                  <img src="images/la-mer.jpg"/>
+                  <p>The grasp of darkness has reached its demise, the ever mighty, ever mysterious, ever nourishing being 
+                        known as the sea has begun the daily endeavor of embracing enlightenment from the big fireball itself...</p>
+                  <a href="https://publish.illinois.edu/thejavanoob/debussys-la-mer-a-portrait/">Read More</a>
+            </div>      
       </div>
 </body>
 
