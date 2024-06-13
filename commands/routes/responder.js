@@ -15,26 +15,31 @@ const storage = multer.diskStorage({
   const upload = multer({ storage: storage })
 
 var state = {}
-var fileName = ""
 
 router.post('/upload', upload.single('file'), (req, res) => {
-    fileName = req.file.originalname
+    let fileName = req.file.originalname
     //delete all other files
     fs.readdirSync('uploads/').forEach(file => {
         if (file !== fileName) {
             fs.unlinkSync('uploads/' + file);
         }
     });
-    console.log(`Received file ${req.file.originalname}`);
-    res.sendStatus(200);
+    res.status(200).send("Uploaded " + fileName);
 });
 
 router.get('/download', (req, res) => {
-    if (fileName === "") {
+    let fileName = fs.readdirSync('uploads/')[0];
+    if (fileName === undefined) {
         res.sendStatus(404);
+        console.log("No file to download");
         return
     }
     res.download(`uploads/${fileName}`);
+});
+
+router.get('/ls', (req, res) => {
+    let files = fs.readdirSync('uploads/');
+    res.send(files);
 });
 
 module.exports = router;
