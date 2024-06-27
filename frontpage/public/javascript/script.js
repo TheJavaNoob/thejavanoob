@@ -5,14 +5,14 @@ var lineHeight;
 var scrollStart;
 var auto = true;
 $(document).ready(function () {
-	headerHeight = document.querySelector(".picker-container").offsetTop;
+	headerHeight = document.querySelector(".banner-container").offsetTop;
 	screenHeight = document.querySelector("#content-about").offsetTop;
 	listStart = document.querySelector('#li-development').offsetTop;
 	lineHeight = document.querySelector('#li-research').offsetTop - listStart;
-	scrollStart = document.querySelector(".picker ul").scrollTop;
-	$(".picker ul").on("scroll", function () {
+	scrollStart = document.querySelector(".banner ul").scrollTop;
+	$(".banner ul").on("scroll", function () {
 		var offset = $(this).scrollTop();
-		document.querySelectorAll(".picker ul li").forEach(entry => {
+		document.querySelectorAll(".banner ul li").forEach(entry => {
 			if (!auto && entry.offsetTop - listStart == offset - scrollStart) {
 				document.querySelector("#content-" + entry.id.substring(3)).scrollIntoView({
 					behavior: "smooth"
@@ -27,14 +27,14 @@ $(document).ready(function () {
 		// Change position over 1 second
 		entry.style.transform = "translateX(" + newPosition + ")";
 	});
-	setInterval(moveRight, 15000);
+	// setInterval(moveRight, 15000);
 });
 
 $(window).resize(function () {
 	screenHeight = document.querySelector("#content-about").offsetTop;
 	listStart = document.querySelector('#li-development').offsetTop;
 	lineHeight = document.querySelector('#li-research').offsetTop - listStart;
-	scrollStart = document.querySelector(".picker ul").scrollTop % lineHeight;
+	scrollStart = document.querySelector(".banner ul").scrollTop % lineHeight;
 });
 var cont_prev;
 $(window).scroll(function () {
@@ -44,21 +44,21 @@ $(window).scroll(function () {
 	var delta_cap = (delta - screenHeight * 0.5) / (screenHeight * 0.2);
 	if (delta_cap > 1) delta_cap = 1;
 	if (delta_cap < 0) delta_cap = 0;
-	$(".picker").css({
+	$(".banner").css({
 		width: (delta_cap * 8) + "em",
 		
 	});
-	$(".picker img").css({
+	$(".banner img").css({
 		transform: "scaleX(" + delta_cap + ")"
 	});
 	if (scrollTop < headerHeight) {
-		$(".picker-container").css({
+		$(".banner-container").css({
 			position: "absolute",
 			bottom: "0px",
 			top: "initial"
 		})
 	} else {
-		$(".picker-container").css({
+		$(".banner-container").css({
 			position: "fixed",
 			top: "0px",
 			bottom: "initial"
@@ -70,7 +70,7 @@ $(window).scroll(function () {
 					auto = true;
 					cont_prev = content.id;
 					if (content.id.substring(8) == "about") return;
-					document.querySelector(".picker ul").scrollTo({
+					document.querySelector(".banner ul").scrollTo({
 						top: document.querySelector("#li-" + content.id.substring(8)).offsetTop - listStart + scrollStart,
 						behavior: 'smooth'
 					});

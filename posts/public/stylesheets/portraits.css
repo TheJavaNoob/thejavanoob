@@ -1,0 +1,21 @@
+.main-body {
+	margin-top: 1.5em;
+}
+
+.audio-controls{
+	display: flex;
+	/* justify-content: center; */
+	align-items: center;
+}
+
+#playback-indicator {
+	position: absolute;
+	filter: invert(1);
+	font-size: 1em;
+	transform: translateY(-1.2em);
+}
+
+.time-marker:hover {
+	color: #ccc;
+	cursor: pointer;
+}

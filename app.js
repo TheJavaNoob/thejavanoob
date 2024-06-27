@@ -22,9 +22,8 @@ app.use("/footsteps", express.static(path.join(__dirname, 'footsteps/public')));
 const footstepsResponder = require('./footsteps/routes/responder');
 app.use('/footsteps', footstepsResponder);
 
-//Commands module
-const commandsResponder = require('./commands/routes/responder');
-app.use('/covyands', commandsResponder);
+//Posts module
+app.use("/posts", express.static(path.join(__dirname, 'posts/public')));
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

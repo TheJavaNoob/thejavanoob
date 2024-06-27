@@ -1,10 +1,12 @@
 <html>
+<head>
 <script src="javascript/jquery-3.7.1.min.js"></script>
 <title>TheJavaNoob's Website</title>
 <link rel="stylesheet" href="stylesheets/style.css">
 <script src="javascript/script.js"></script>
 <meta charset="UTF-8">
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
 <body>
       <div class="header">
             <div class="header-top">
@@ -20,34 +22,57 @@
                                     </a>
                               </div>
                               <div class="header-display-entry">
-                                    <a href="#"
-                                    <img src="images/footsteps.png" />
-                                    <p>
-                                          Web App: Footsteps
-                                    </p>
+                                    <a href="/footsteps">
+                                          <img src="images/footsteps.png" />
+                                          <p>
+                                                Web App: Footsteps
+                                          </p>
+                                    </a>
                               </div>
                               <div class="header-display-entry">
-                                    <img src="images/midsummer.jpg" />
-                                    <p>
-                                          Music: A Midsummer Night's Dream
-                                    </p>
+                                    <a href="https://marketplace.visualstudio.com/items?itemName=SteveLin.lc3-debugger">
+                                          <img src="images/lc3-debugger.png" />
+                                          <p>
+                                                VSCode Extension: LC3 Debugger
+                                          </p>
+                                    </a>
+                              </div>
+                              <div class="header-display-entry">
+                                    <a href="https://www.bilibili.com/video/BV1pG41117W6">
+                                          <img src="images/midsummer.jpg" />
+                                          <p>
+                                                Music: A Midsummer Night's Dream
+                                          </p>
+                                    </a>
+                              </div>
+                              <div class="header-display-entry">
+                                    <a href="/posts/la-mer-a-portrait.html">
+                                          <img src="images/la-mer.jpg" />
+                                          <p>
+                                                Debussy's <i>La Mer</i>: A Portrait
+                                          </p>
+                                    </a>
                               </div>
                         </div>
                         <span class="arrow" onclick="moveRight()">&#10095;</span>
                   </div>
                   <!--img src="images/header.jpg" /-->
-                  <div style="height: 100%">
+                  <div class="header-welcome">
                         <h1>Welcome to</h1>
                   </div>
             </div>
 
-            <div class="picker-container">
-                  <span class="title title-text">TheJavaNoob's</span>
-                  <div class="picker">
+            <div class="banner-container">
+                  <span class="title-text" style="padding-right: 0.5rem; margin-bottom: 0.3rem;">TheJavaNoob's</span>
+                  <div class="banner">
                         <ul>
                               <li id="li-development" class="title-text">
 
                                     <img src="icons/development.png" />
+                              </li>
+                              <li id="li-writing" class="title-text">
+
+                                    <img src="icons/writing.png" />
                               </li>
                               <li id="li-research" class="title-text">
 
@@ -65,22 +90,22 @@
 
                                     <img src="icons/language.png" />
                               </li>
-                              <li id="li-writing" class="title-text">
-
-                                    <img src="icons/writing.png" />
-                              </li>
+                              
                         </ul>
                   </div>
-                  <span class="title-text">Hut</span>
+                  <span class="title-text" style="padding-left: 0.5rem; margin-bottom: 0.3rem;">Hut</span>
             </div>
       </div>
       <div id="content-about" class="content" style="padding-top: 0; height: 80vh;">
             <h1>About Me</h1>
-            <p> Hello Internet! I am Steve (Haoxiang) Lin, an undergraduate at Zhejiang University-University of
-                  Illinois Urbana-Champaign joint institute (that's a mouthful). I am an enthusiastic software
-                  developer, a novice researcher, a diehard classical music fan, an average runner, and a
-                  literature and linguistic nerd.
-            </p>
+            <div class="about-box">
+                  <img src="images/photo.jpg" />
+                  <p> Hello Internet! I am Steve (Haoxiang) Lin, an undergraduate at Zhejiang University-University of
+                        Illinois Urbana-Champaign joint institute (that's a mouthful). I am an enthusiastic software
+                        developer, a novice researcher, a diehard classical music fan, an average runner, and a
+                        literature and linguistic nerd.
+                  </p>
+            </div>
             <h2>Contact Me</h2>
             <p>Email: <a href="mailto:haoxiang.23@intl.zju.edu.cn">haoxiang.23@intl.zju.edu.cn</a></p>
       </div>
@@ -88,7 +113,7 @@
             <h1> Development </h1>
             <p>I do programming with a vast number of lanuages. I did projects in VB, HTML/JS/CSS, Python, C+/Qt,
                   Swift and counting. I have also touched Objective-C and C#. (No, Java is not on here. I had enough
-                  of downloading JVM everywhere and ditched it long ago. It only lives in the name now).
+                  of downloading JVM everywhere and ditched it long ago. It only lives in my name now).
             <p>Check out my GitHub repos:
                   <a href="https://www.github.com/thejavanoob">
                         https://www.github.com/thejavanoob
@@ -97,23 +122,78 @@
             <p>Explore my recent projects here.</p>
 
             <div class="content-entry">
-                  <h2><a href="/footsteps">Footsteps</a></h2>
-                  <hr>
-                  <p>A website to visualize the footsteps of historic figures. Powered by AI.</p>
-                  <img src="images/footsteps.png"/>
-                  <br>
-                  <a href="/footsteps">Try it out.</a>
+                  <img src="images/lc3-debugger.png"/>
+                  <div class="content-entry-text">
+                        <h2><a href="https://github.com/TheJavaNoob/lc3debugger">VSCode LC-3 Debugger</a></h2>
+                        <hr>
+                        <p>A VSCode debugger for the educational computer system LC-3.</p>
+                        <br>
+                        <a href="https://github.com/TheJavaNoob/lc3debugger">Source Code</a>
+                        <a href="https://marketplace.visualstudio.com/items?itemName=SteveLin.lc3-debugger">VSCode Marketplace</a>
+                  </div>
             </div>
 
             <div class="content-entry">
-                  <h2><a href="https://github.com/TheJavaNoob/lc3debugger">VSCode LC-3 Debugger</a></h2>
-                  <hr>
-                  <p>A VSCode debugger for the educational computer system LC-3. (Work in Progress)</p>
-                  <a href="https://github.com/TheJavaNoob/lc3debugger">Source Code</a>
+                  <img src="images/footsteps.png"/>
+                  <div class="content-entry-text">
+                        <h2><a href="/footsteps">Footsteps</a></h2>
+                        <hr>
+                        <p>A web app to visualize the footsteps of historic figures. Powered by AI.</p>
+                        <br>
+                        <a href="/footsteps">Try it out.</a>
+                  </div>
+            </div>
+      </div>
+      <div id="content-writing" class="content">
+            <h1> Reading & Writing </h1>
+            <p>I like reading Classical Chinese literature and Contemporary Western literature, and I have written
+                  some poems and texts from time to time.
+            </p>
+            <br />
+            <h2>Classical Music Portraits</h2>
+            <p> Some Classical Music tell stories. Some stories were told in the title, but most are inferred by the listener.
+                  Here, I aim to capture the essence of the stories in the form of short novels. </p>
+            </p>
+            
+            <div class="content-entry">
+                  <img src="images/la-mer.jpg"/>
+                  <div class="content-entry-text">
+                        <a href="/posts/la-mer-a-portrait.html">
+                              <h2>Debussy's <i>La Mer</i>: A Portrait</h2>
+                        </a>
+                        <hr>
+                        <p>The grasp of darkness has reached its demise, the ever mighty, ever mysterious, ever nourishing being 
+                              known as the sea has begun the daily endeavor of embracing enlightenment from the big fireball itself...</p>
+                        <a href="/posts/la-mer-a-portrait.html">Read More</a>
+                  </div>
             </div>
 
+            <br/>
+            <h2>随笔</h2>
+            <div class="content-entry">
+                  <img src="images/way-back.jpeg"/>
+                  <div class="content-entry-text">
+                        <a href="/posts/way-back.html">
+                              <h2>南乡子·归途即景</h2>
+                        </a>
+                        <hr>
+                        <p>岭表至江南，幕雨烟云人未还。滴水惜窗风拂去，微寒。平亩数丈小禾潭。<br/>
+                              田家少人闲，翠岭清溪无暇观。锄罢归来路何处。青山。无奈细雨湿笠衫。</p>
+                        <a href="/posts/way-back.html">Read More</a>
+                  </div>
+            </div>
+            <div class="content-entry">
+                  <img src="images/on-dawn.jpeg"/>
+                  <div class="content-entry-text">
+                        <a href="/posts/on-dawn.html">
+                              <h2>黎明偶记</h2>
+                        </a>
+                        <hr>
+                        <p>因为赶四级考试又一次在六点早起，拉开窗帘时天尚未泛白。想起学期初也常常六点起床，漫步校园，不禁喟然感慨...</p>
+                        <a href="/posts/on-dawn.html">Read More</a>
+                  </div>
+            </div>
       </div>
-
       <div id="content-research" class="content">
             <h1> Research </h1>
             <p>I am still <del>barging my way</del> getting into the AcADemIc CoMmuNItY, with currently no publications
@@ -135,22 +215,25 @@
             <p> I have tried to do composing, but only made one composition. You can listen to them on Bilibili.
             </p>
             <div class="content-entry">
-                  <h2> A Midsummer Night's Dream</h2>
-                  <h3>Trio for Violin, Flute, and Clarinet in F major </h3>
-                  <hr>
-                  <p> This piece was inspired by a walk to the convenience store in Summer 2019, and it took 4 years to
-                        complete. The paintings in the video are modified by AI based on photos taken by me.
-                  </p>
                   <img src="images/midsummer.jpg"/>
-                  <br>
-                  <a href="https://www.bilibili.com/video/BV1pG41117W6">
-                        Listen Here</a>
+                  <div class="content-entry-text">
+                        <h2> A Midsummer Night's Dream</h2>
+                        <h3>Trio for Violin, Flute, and Clarinet in F major </h3>
+                        <hr>
+                        <p> This piece was inspired by a walk to the convenience store in Summer 2019, and it took 4 years to
+                              complete. The paintings in the video are photos taken by me that are modified by AI.
+                        </p>
+                        
+                        <br>
+                        <a href="https://www.bilibili.com/video/BV1pG41117W6">
+                              Listen Here</a>
+                  </div>
             </div>
       </div>
       <div id="content-running" class="content">
             <h1> Running & Sports </h1>
             <p>I am an average runner that covers all distances (versatile? maybe. fast? no.) My main event seems to
-                  be the 400m with a PB of 56.91s. But I do still enjoy a good long run for it represents the lonely
+                  be the 400m with a PB of 56.91s. But I also enjoy a good long run for it represents the lonely
                   and self-transcending nature of running.
             </p>
             <p>I am also <del>barging my way</del> getting into swimming and cycling. My goal is to run a
@@ -161,8 +244,7 @@
             <h1> Language Learning & Linguistics </h1>
             <p>I am currently learning German and Japanese, which means at some point I could be considered
                   quadro-lingo. It's impossible to not be interested in linguistics after learning so many
-                  languages,
-                  especially phonetics (aka I LiKe MakInG wiREd SoUnDs).
+                  languages, especially phonetics (aka I LiKe MakInG wiREd SoUnDs).
             </p>
             <div class="language">
                   <div>
@@ -176,28 +258,6 @@
                         <p>私も日本語の学生です。</p>
                   </div>
             </div>
-      </div>
-      <div id="content-writing" class="content">
-            <h1> Reading & Writing </h1>
-            <p>I like reading Classical Chinese literature and Contemporary Western literature, and I have written
-                  some poems and texts from time to time.
-            </p>
-            <br />
-            <h2>Classical Music Portraits</h2>
-            <p> Some Classical Music tell stories. Some stories were told in the title, but most are inferred by the listener.
-                  Here, I aim to capture the essence of the stories in the form of short novels. </p>
-            </p>
-            
-            <div class="content-entry">
-                  <a href="https://publish.illinois.edu/thejavanoob/debussys-la-mer-a-portrait/">
-                        <h2>Debussy's <i>La Mer</i>: A Portrait</h2>
-                  </a>
-                  <hr>
-                  <img src="images/la-mer.jpg"/>
-                  <p>The grasp of darkness has reached its demise, the ever mighty, ever mysterious, ever nourishing being 
-                        known as the sea has begun the daily endeavor of embracing enlightenment from the big fireball itself...</p>
-                  <a href="https://publish.illinois.edu/thejavanoob/debussys-la-mer-a-portrait/">Read More</a>
-            </div>      
       </div>
 </body>
 
