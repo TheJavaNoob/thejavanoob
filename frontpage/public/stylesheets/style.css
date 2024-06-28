@@ -317,6 +317,17 @@ body {
 	font-size: 2.5em;
 }
 
+.content-image{
+	max-height: 20em;
+	width: auto;
+}
+
+.image-caption{
+	margin: 0.1em;
+	font-size: 0.8em;
+	color: #aaa;
+}
+
 .content-entry{
 	display: flex;
 }
@@ -365,4 +376,8 @@ a:hover {
 	width: auto;
 	align-self: center;
 	margin-right: 1em;
+}
+
+.footer{
+    border-top: #aaa 1px solid;
 }
