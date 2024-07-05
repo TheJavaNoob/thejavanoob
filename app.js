@@ -22,6 +22,11 @@ app.use("/footsteps", express.static(path.join(__dirname, 'footsteps/public')));
 const footstepsResponder = require('./footsteps/routes/responder');
 app.use('/footsteps', footstepsResponder);
 
+//ProgramNotes module
+app.use("/programnotes", express.static(path.join(__dirname, 'programnotes/public')));
+const programNotesResponder = require('./programnotes/routes/responder');
+app.use('/programnotes', programNotesResponder);
+
 //Posts module
 app.use("/posts", express.static(path.join(__dirname, 'posts/public')));
 
