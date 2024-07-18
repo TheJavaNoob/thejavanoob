@@ -1,6 +1,6 @@
 [submodule "footsteps"]
 	path = footsteps
 	url = ./footsteps
-[submodule "programnote"]
-	path = programnote
-	url = ./programnote
+[submodule "programnotes"]
+	path = programnotes
+	url = ./programnotes
