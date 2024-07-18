@@ -1,6 +1,6 @@
 [submodule "footsteps"]
 	path = footsteps
-	url = https://github.com/TheJavaNoob/thejavanoob/footsteps
+	url = https://github.com/TheJavaNoob/footsteps
 [submodule "programnotes"]
 	path = programnotes
-	url = https://github.com/TheJavaNoob/thejavanoob/programnotes
+	url = https://github.com/TheJavaNoob/programnotes
