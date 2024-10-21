@@ -139,10 +139,15 @@ h1, h2, p {
     line-height: 1.3em;
 }
 
+.main-body p{
+    font-size: 1.2em;
+}
+
 .image-caption{
-    font-size: 0.8em;
-    color: #aaa;
+    font-size: 1em;
+    color: #ccc;
     margin: 0;
+    margin-bottom: 2em;
 }
 
 .footer{
