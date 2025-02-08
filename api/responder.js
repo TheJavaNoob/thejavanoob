@@ -15,7 +15,7 @@ const privilegeExpirationInSecond = 86400;
 router.post('/getToken/:userID', async (req, res) => {
     var userID = req.params.userID;
     const tokenWithUid = RtcTokenBuilder.buildTokenWithRtm(appId, appCertificate, userID, userID, role, tokenExpirationInSecond, privilegeExpirationInSecond);
-
+    console.log(userID);
     res.end(tokenWithUid);
 });
 
