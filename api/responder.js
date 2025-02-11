@@ -1,4 +1,5 @@
 var express = require('express');
+var cors = require('cors');
 var router = express.Router();
 require('dotenv').config();
 
@@ -12,10 +13,12 @@ const role = RtcRole.PUBLISHER;
 const tokenExpirationInSecond = 86400;
 const privilegeExpirationInSecond = 86400;
 
+router.use(cors());
+
 router.post('/getToken/:userID', async (req, res) => {
     var userID = req.params.userID;
     const tokenWithUid = RtcTokenBuilder.buildTokenWithRtm(appId, appCertificate, userID, userID, role, tokenExpirationInSecond, privilegeExpirationInSecond);
-    console.log(userID);
+    console.log("userID:", userID);
     res.end(tokenWithUid);
 });
 
